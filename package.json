@@ -1,0 +1,23 @@
+{
+  "name": "journal-entry-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "snowpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "snowpack dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jacksonckc/Journal-Entry-App.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jacksonckc/Journal-Entry-App/issues"
+  },
+  "homepage": "https://github.com/Jacksonckc/Journal-Entry-App#readme",
+  "dependencies": {
+    "snowpack": "^3.8.8"
+  }
+}
