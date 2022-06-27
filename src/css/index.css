@@ -138,3 +138,51 @@ ul li a div {
     display: none;
   }
 }
+
+/* Entries CSS */
+.entriesContent {
+  background-color: var(--Light_Green);
+  padding: 50px 0 0 0 0
+  width: 90%;
+  height: 650px;
+  margin: auto;
+}
+
+.entriesButtons {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+#leftButton {
+  width: 90px;
+  height: 90px;
+  /* padding: 0 30% 0 30%; */
+  background-color: #fafafa;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50px;
+  text-align: center;
+}
+
+#leftButton:hover {
+  background-color: rgb(220, 220, 220);
+}
+
+#rightButton {
+  width: 90px;
+  height: 90px;
+  /* padding: 0 30% 0 30%; */
+  background-color: #fafafa;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50px;
+  text-align: center;
+}
+
+#rightButton:hover {
+  background-color: rgb(220, 220, 220);
+}

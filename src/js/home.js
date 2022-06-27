@@ -1,10 +1,10 @@
-import { convertToJson, loadNavbar } from './helper.js';
+import { convertToJson, loadLogo } from './helper.js'
 
-async function getResponse(url) {
-  return await fetch(url)
-    .then(convertToJson)
-    .then((data) => console.log(data));
-}
+// async function getResponse(url) {
+//   return await fetch(url)
+//     .then(convertToJson)
+//     .then((data) => console.log(data))
+// }
 
-getResponse('../mock.json');
-loadNavbar();
+// getResponse('../mock.json')
+loadLogo()
