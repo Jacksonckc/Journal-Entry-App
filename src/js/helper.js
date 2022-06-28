@@ -1,19 +1,19 @@
 const baseUrl = '../mock.json'
 
-export function convertToJson(res) {
-  const response = res.json()
-  if (response) {
-    return response
-  } else {
-    throw { name: 'servicesError', message: response }
-  }
-}
-
 function convertToText(res) {
   if (res.ok) {
     return res.text()
   } else {
     throw new Error('Bad Response')
+  }
+}
+
+function convertToJson(res) {
+  const response = res.json()
+  if (response) {
+    return response
+  } else {
+    throw { name: 'servicesError', message: response }
   }
 }
 
@@ -30,9 +30,17 @@ export function renderWithTemplate(template, parent) {
 }
 
 export async function loadLogo() {
-  const navbar = await loadTemplate('../partials/logo.html')
-  const navbarElement = document.getElementById('logo')
+  const logo = await loadTemplate('../partials/logo.html')
+  const logoElement = document.getElementById('logo')
+  renderWithTemplate(logo, logoElement)
+}
+
+export async function loadNavbar(currentPage) {
+  const navbar = await loadTemplate('partials/navbar.html')
+  const navbarElement = document.getElementById('navbar')
   renderWithTemplate(navbar, navbarElement)
+  const element = document.getElementById(currentPage)
+  element.style.pointerEvents = 'none'
 }
 
 export async function callAPI(endpoint = '', options = '') {

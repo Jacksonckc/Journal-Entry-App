@@ -20,13 +20,7 @@ body {
   position: sticky;
   top: 0;
   background-color: var(--Green);
-  background-image: repeating-radial-gradient(
-    circle at 0 0,
-    var(--Green),
-    var(--primary-color) 10px,
-    var(--Light_Green) 10px,
-    var(--Brown) 20px /* determines size */
-  );
+  background-image: url('../img/leaves.jpeg');
 }
 
 .recent {
@@ -62,32 +56,29 @@ ul li {
   margin: 0 auto;
 }
 
-ul li a {
-  text-decoration: none;
-  color: var(--White);
-  text-align: center;
-}
-
 ul li:hover {
   background-color: rgba(220, 220, 220);
   color: var(--Dark_Green);
   border-radius: 15px;
 }
 
-ul li a div {
-  text-align: center;
-}
-
-.navImages {
+.navLinks {
   height: auto;
   margin: auto;
   padding: 5px;
   font-size: 18px;
   text-align: center;
+  text-decoration: none;
+  color: var(--White);
 }
-.navImages img {
+
+.navLinks img {
   margin: 0 10px;
   max-width: 30px;
+}
+
+.navLinks div {
+  text-align: center;
 }
 
 @media screen and (min-width: 550px) {
@@ -96,6 +87,7 @@ ul li a div {
     position: absolute;
     top: 0;
   }
+
   .recent {
     margin-left: 150px;
     margin-right: 0;
@@ -104,9 +96,6 @@ ul li a div {
 
   #logo {
     z-index: 1;
-  }
-  ul li a img {
-    display: none;
   }
 
   ul {
@@ -117,8 +106,13 @@ ul li a div {
     justify-content: flex-start;
     padding-top: 100px;
   }
-  ul > * {
+
+  ul li {
     padding: 20px;
+  }
+
+  .navLinks img {
+    display: none;
   }
 }
 
@@ -126,15 +120,18 @@ ul li a div {
   ul {
     padding-top: 0px;
   }
+
   ul li {
     margin: 0;
     padding: 10px;
   }
-  .navImages img {
+
+  .navLinks img {
     max-width: 25px;
     margin: 0;
   }
-  ul li a div {
+
+  .navLinks div {
     display: none;
   }
 }
@@ -142,7 +139,7 @@ ul li a div {
 /* Entries CSS */
 .entriesContent {
   background-color: var(--Light_Green);
-  padding: 50px 0 0 0 0
+  padding: 50px 0 0 0 0;
   width: 90%;
   height: 650px;
   margin: auto;
