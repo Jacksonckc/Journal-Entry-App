@@ -1,4 +1,4 @@
-const baseUrl = '../mock.json'
+const baseUrl = 'https://online-journey.herokuapp.com/'
 
 function convertToText(res) {
   if (res.ok) {
@@ -51,3 +51,12 @@ export async function callAPI(endpoint = '', options = '') {
       return data
     }, options)
 }
+
+// export function hideNavBar() {
+//   var navBar = document.getElementById('navContent')
+//   if (navBar.style.display === 'none') {
+//     navBar.style.display === 'block'
+//   } else {
+//     navBar.style.display = 'none'
+//   }
+// }

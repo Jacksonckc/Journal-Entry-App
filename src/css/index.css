@@ -28,6 +28,7 @@ body {
 }
 
 ul {
+  transition: 0.3s;
   position: fixed;
   left: 0;
   bottom: 0;
@@ -81,6 +82,20 @@ ul li:hover {
   text-align: center;
 }
 
+#hamburgerMenu div {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+}
+
+.entriesBox form {
+  text-align: center;
+  width: 200px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+/* This is the media query for mobile views */
 @media screen and (min-width: 550px) {
   #navbar {
     height: 100vh;
@@ -116,6 +131,7 @@ ul li:hover {
   }
 }
 
+/* Second media query is for navbar link and removing text to make it all fit */
 @media screen and (max-width: 400px) {
   ul {
     padding-top: 0px;
@@ -138,11 +154,11 @@ ul li:hover {
 
 /* Entries CSS */
 .entriesContent {
-  background-color: var(--Light_Green);
-  padding: 50px 0 0 0 0;
+  /* padding: 50px 0 0 0 0; */
   width: 90%;
   height: 650px;
   margin: auto;
+  background-color: var(--Light_Green);
 }
 
 .entriesButtons {
@@ -182,4 +198,20 @@ ul li:hover {
 
 #rightButton:hover {
   background-color: rgb(220, 220, 220);
+}
+
+@media screen and (min-width: 550px) {
+  .entriesBox {
+    margin-left: 150px;
+    margin-right: 0;
+  }
+
+  .entriesContent {
+    /* padding: 50px 0 0 0 0; */
+
+    width: 90%;
+    height: 650px;
+    margin: auto;
+    background-color: var(--Light_Green);
+  }
 }
