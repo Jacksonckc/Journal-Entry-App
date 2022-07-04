@@ -1,0 +1,16 @@
+#logo {
+  width: 100%;
+  z-index: 1;
+}
+
+#logo img {
+  box-sizing: content-box;
+  width: 150px;
+  padding-right: calc(100% - 150px);
+  display: block;
+  position: sticky;
+  top: 0;
+  background-color: var(--Green);
+  background-image: url('../img/leaves.jpeg');
+  z-index: 1;
+}

@@ -40,23 +40,36 @@ export async function loadNavbar(currentPage) {
   const navbarElement = document.getElementById('navbar')
   renderWithTemplate(navbar, navbarElement)
   const element = document.getElementById(currentPage)
-  element.style.pointerEvents = 'none'
+  if (element) {
+    element.style.pointerEvents = 'none'
+    element.querySelector('div').style.color = 'black'
+  }
 }
 
 export async function callAPI(endpoint = '', options = '') {
   return fetch(baseUrl + endpoint)
     .then(convertToJson)
     .then((data) => {
-      // console.log(data)
+      console.log(data)
       return data
     }, options)
 }
 
-// export function hideNavBar() {
-//   var navBar = document.getElementById('navContent')
-//   if (navBar.style.display === 'none') {
-//     navBar.style.display === 'block'
-//   } else {
-//     navBar.style.display = 'none'
-//   }
-// }
+export function addHideNavListener() {
+  const navbar = document.getElementById('navbar')
+  const main = document.querySelector('main')
+  let hamburgerMenu = navbar.querySelector('button')
+
+  navbar.addEventListener('click', () => {
+    navbar.classList.toggle('toggleNavbarStyle')
+    main.classList.toggle('toggleMainStyle')
+    hamburgerMenu.classList.toggle('toggleButtonStyle')
+    if (hamburgerMenu.innerHTML == '←') {
+      hamburgerMenu.innerHTML = '→'
+      console.log(hamburgerMenu.innerHTML)
+      console.log('here')
+    } else {
+      hamburgerMenu.innerHTML = '←'
+    }
+  })
+}
