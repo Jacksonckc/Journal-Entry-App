@@ -42,7 +42,7 @@ export async function loadNavbar(currentPage) {
   const element = document.getElementById(currentPage)
   if (element) {
     element.style.pointerEvents = 'none'
-    element.querySelector('div').style.color = 'black'
+    element.querySelector('div').style.color = 'white'
   }
 }
 
@@ -58,18 +58,18 @@ export async function callAPI(endpoint = '', options = '') {
 export function addHideNavListener() {
   const navbar = document.getElementById('navbar')
   const main = document.querySelector('main')
-  let hamburgerMenu = navbar.querySelector('button')
+  let hamburgerMenuButton = navbar.querySelector('button')
 
   navbar.addEventListener('click', () => {
     navbar.classList.toggle('toggleNavbarStyle')
     main.classList.toggle('toggleMainStyle')
-    hamburgerMenu.classList.toggle('toggleButtonStyle')
-    if (hamburgerMenu.innerHTML == '←') {
-      hamburgerMenu.innerHTML = '→'
-      console.log(hamburgerMenu.innerHTML)
+    hamburgerMenuButton.classList.toggle('toggleButtonStyle')
+    if (hamburgerMenuButton.innerHTML == '←') {
+      hamburgerMenuButton.innerHTML = '→'
+      console.log(hamburgerMenuButton.innerHTML)
       console.log('here')
     } else {
-      hamburgerMenu.innerHTML = '←'
+      hamburgerMenuButton.innerHTML = '←'
     }
   })
 }

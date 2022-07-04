@@ -23,7 +23,8 @@ body {
 
 #navbar li:hover {
   transition: 1s;
-  background-color: antiquewhite;
+  background-color: azure;
+  box-shadow: 2px 2px 5px var(--Dark_Green);
 }
 
 #navbar li .navLinks img {
@@ -33,11 +34,11 @@ body {
 
 #navbar li .navLinks div {
   display: none;
-  color: var(--White);
+  color: var(--Dark_Green);
   font-family: 'Roboto', sans-serif;
 }
 
-#hamburgerMenu {
+#hamburgerMenuButton {
   display: none;
 }
 
@@ -80,7 +81,7 @@ body {
     font-size: var(--s1);
     font-weight: 500;
   }
-  #hamburgerMenu {
+  #hamburgerMenuButton {
     display: block;
     position: absolute;
     right: 0;
@@ -89,6 +90,9 @@ body {
     border-radius: 50% 0;
     color: var(--White);
     background-color: var(--Dark_Green);
+  }
+  #hamburgerMenuButton:hover {
+    box-shadow: 2px 2px 5px var(--Dark_Green);
   }
   .toggleButtonStyle {
     transform: translateX(20px);
