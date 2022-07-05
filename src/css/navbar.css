@@ -12,7 +12,6 @@ body {
   background-color: var(--Brown);
   border-radius: 10px 10px 0 0;
   padding: 10px 0;
-  transition: 0.3s;
 }
 
 #navbar li {
@@ -33,6 +32,7 @@ body {
 }
 
 #navbar li .navLinks div {
+  transition: padding 1s;
   display: none;
   color: var(--Dark_Green);
   font-family: 'Roboto', sans-serif;
@@ -45,7 +45,8 @@ body {
 @media screen and (min-width: 400px) {
   #navbar li .navLinks img {
     width: 40px;
-    margin: 0 10px;
+    margin: auto;
+    display: block;
   }
   #navbar li .navLinks div {
     width: 60px;
