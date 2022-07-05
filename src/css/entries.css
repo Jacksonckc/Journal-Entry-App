@@ -1,3 +1,53 @@
-@import url(normalize.css);
+@import url(global.css);
 @import url(logo.css);
 @import url(navbar.css);
+
+.entriesContent {
+  padding-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 10px;
+}
+
+.entriesContent a {
+  text-decoration: none;
+  color: var(--Dark_Green);
+  text-align: center;
+}
+
+#add_button {
+  max-width: 100px;
+  width: 100%;
+  display: block;
+  margin: auto;
+  padding: 10px;
+}
+
+.entryItem {
+  background-color: var(--Light_Green);
+  padding: 5px;
+  border: 1px solid var(--Dark_Green);
+  border-radius: 10px;
+  height: 150px;
+  overflow: hidden;
+  filter: grayscale(80%);
+  /* transition: 1s; */
+}
+
+.entryItem:hover {
+  filter: grayscale(0);
+}
+
+.displayOverlay {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 550px) {
+  .displayOverlay {
+    transform: translate(calc(-50% + var(--logo_width) / 2), -50%);
+  }
+}

@@ -5,7 +5,6 @@ loadNavbar('entriesPage').then(() => addHideNavListener())
 
 async function populateEntriesContent() {
   const content = await callAPI('entries')
-  // console.log(content)
   content.reverse()
 
   let count = 1
@@ -22,11 +21,25 @@ async function populateEntriesContent() {
     //     console.log(photo)
     //   })
     // })
+    const entryItem = document.createElement('div')
+    entryItem.setAttribute('class', 'entryItem clickToOpen')
 
     const entryText = document.createElement('div')
     entryText.setAttribute('class', 'entryText')
     entryText.innerHTML = item.entry
-    entriesContent.appendChild(entryText)
+    entryItem.appendChild(entryText)
+    entriesContent.appendChild(entryItem)
+  })
+
+  const entryItemsNeedToHaveClickEvent =
+    document.querySelectorAll('.clickToOpen')
+  entryItemsNeedToHaveClickEvent.forEach((item) => {
+    item.addEventListener('click', (e) => {
+      e.currentTarget.classList.toggle('displayOverlay')
+    })
+    item.addEventListener('blur', (e) => {
+      e.currentTarget.classList.remove('displayOverlay')
+    })
   })
 }
 populateEntriesContent()

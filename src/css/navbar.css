@@ -14,6 +14,17 @@ body {
   padding: 10px 0;
 }
 
+/* #navbarAnimation {
+  transform: translateY(100px);
+  animation: moveUp 1s forwards;
+}
+
+@keyframes moveUp {
+  to {
+    transform: translateY(0px);
+  }
+} */
+
 #navbar li {
   border-radius: 10px;
   list-style: none;
@@ -64,13 +75,13 @@ body {
     display: block;
     left: 0;
     height: 100vh;
-    width: 150px;
+    width: var(--logo_width);
     padding-top: 100px;
     box-shadow: 5px 0 10px var(--Dark_Green);
   }
 
   .toggleNavbarStyle {
-    left: -150px !important;
+    left: calc(-1 * var(--logo_width)) !important;
   }
 
   #navbar li .navLinks img {
@@ -99,7 +110,7 @@ body {
     transform: translateX(20px);
   }
   main {
-    margin-left: 150px;
+    margin-left: var(--logo_width);
     transition: 0.5s;
   }
   .toggleMainStyle {

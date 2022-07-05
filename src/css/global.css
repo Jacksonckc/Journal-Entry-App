@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap');
 
 :root {
+  /* Colors */
   --Brown: #9b6959;
   --Light_Green: #79bea0;
   --Green: #46ab86;
   --White: #f8f7f9;
   --Dark_Green: #122b14;
+
+  /* for font */
   --ratio: 1.5;
   --s-5: calc(var(--s-4) / var(--ratio));
   --s-4: calc(var(--s-3) / var(--ratio));
@@ -18,12 +21,20 @@
   --s3: calc(var(--s2) * var(--ratio));
   --s4: calc(var(--s3) * var(--ratio));
   --s5: calc(var(--s4) * var(--ratio));
+
+  /* Sizes */
+  --logo_height: 60px;
+  --logo_width: 150px;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
 }
 
 main {

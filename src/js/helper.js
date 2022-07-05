@@ -1,3 +1,5 @@
+import { convertSkypackImportMapToLockfile } from 'snowpack/lib/cjs/util'
+
 const baseUrl = 'https://online-journey.herokuapp.com/'
 
 function convertToText(res) {
@@ -72,4 +74,8 @@ export function addHideNavListener() {
       hamburgerMenuButton.innerHTML = '←'
     }
   })
+  // console.log(document.width)
+  // if (document.width < 550) {
+  //   console.log('hi')
+  // }
 }
