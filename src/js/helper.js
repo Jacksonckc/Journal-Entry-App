@@ -46,13 +46,13 @@ export async function loadNavbar(currentPage) {
   }
 }
 
-export async function callAPI(endpoint = '', options = '') {
-  return fetch(baseUrl + endpoint)
+export async function callAPI(endpoint = '', options = {}) {
+  return fetch(baseUrl + endpoint, options)
     .then(convertToJson)
     .then((data) => {
       console.log(data)
       return data
-    }, options)
+    })
 }
 
 export function addHideNavListener() {
