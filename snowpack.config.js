@@ -1,10 +1,10 @@
 module.exports = {
   mount: {
-    './src': '/'
+    './src': '/',
   },
   buildOptions: {
     out: 'build',
     clean: true,
-    htmlFragments: true
-  }
-};
+    htmlFragments: true,
+  },
+}

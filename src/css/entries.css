@@ -31,7 +31,6 @@
   height: 150px;
   overflow: hidden;
   filter: grayscale(80%);
-  /* transition: 1s; */
 }
 
 .entryItem:hover {
@@ -44,6 +43,9 @@
   top: 50%;
   z-index: 1;
   transform: translate(-50%, -50%);
+  width: 500px;
+  height: 300px;
+  transition: 0.5s;
 }
 
 @media screen and (min-width: 550px) {

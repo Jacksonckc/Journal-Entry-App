@@ -1,7 +1,15 @@
-import { loadLogo, loadNavbar, callAPI, addHideNavListener } from './helper.js'
+import {
+  loadLogo,
+  loadNavbar,
+  callAPI,
+  addHideNavListener,
+  navbarAnimation,
+} from './helper.js'
 
 loadLogo()
 loadNavbar('homePage').then(() => addHideNavListener())
+
+// const navbarAnimation = navbarAnimation()
 
 async function fetchLastEntry() {
   const element = document.getElementById('recent-entry')
