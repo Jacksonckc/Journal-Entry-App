@@ -48,6 +48,14 @@
   transition: 0.5s;
 }
 
+.entryItem button {
+  display: none;
+}
+
+.displayDeleteButton {
+  display: block !important;
+}
+
 @media screen and (min-width: 550px) {
   .displayOverlay {
     transform: translate(calc(-50% + var(--logo_width) / 2), -50%);
