@@ -14,17 +14,6 @@ body {
   padding: 10px 0;
 }
 
-/* #navbarAnimation {
-  transform: translateY(100px);
-  animation: moveUp 1s forwards;
-}
-
-@keyframes moveUp {
-  to {
-    transform: translateY(0px);
-  }
-} */
-
 #navbar li {
   border-radius: 10px;
   list-style: none;
@@ -112,6 +101,7 @@ body {
   main {
     margin-left: var(--logo_width);
     transition: 0.5s;
+    position: relative;
   }
   .toggleMainStyle {
     margin-left: 20px;

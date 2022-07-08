@@ -15,14 +15,13 @@
   text-align: center;
 }
 
-#add_button {
+#addEntryBtn {
   max-width: 100px;
   width: 100%;
   display: block;
   margin: auto;
   padding: 10px;
 }
-
 .entryItem {
   background-color: var(--Light_Green);
   padding: 5px;
@@ -31,6 +30,10 @@
   height: 150px;
   overflow: hidden;
   filter: grayscale(80%);
+  cursor: zoom-in;
+}
+.addEntryItem {
+  cursor: default;
 }
 
 .entryItem:hover {
@@ -40,24 +43,50 @@
 .displayOverlay {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 40vh;
   z-index: 1;
   transform: translate(-50%, -50%);
-  width: 500px;
-  height: 300px;
+  width: 60vw;
+  height: 40vw;
   transition: 0.5s;
+  cursor: default;
 }
 
-.entryItem button {
+.closeBtn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 50%;
+  width: 20px;
+  aspect-ratio: 1/1;
+  display: none;
+  cursor: pointer;
+}
+
+.deleteBtn {
+  cursor: pointer;
+  position: absolute;
+  padding: 10px;
+  font-size: var(--s0);
+  border-radius: 20px;
+  display: none;
+  left: 5px;
+  bottom: 5px;
+}
+
+.editBtn {
   display: none;
 }
 
-.displayDeleteButton {
+.displayBtn {
   display: block !important;
 }
 
 @media screen and (min-width: 550px) {
-  .displayOverlay {
-    transform: translate(calc(-50% + var(--logo_width) / 2), -50%);
+  .deleteBtn {
+    font-size: var(--s1);
+    padding: 15px;
+    bottom: 10px;
+    left: 10px;
   }
 }

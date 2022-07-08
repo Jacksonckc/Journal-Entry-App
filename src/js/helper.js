@@ -66,15 +66,8 @@ export function addHideNavListener() {
     hamburgerMenuButton.classList.toggle('toggleButtonStyle')
     if (hamburgerMenuButton.innerHTML == '←') {
       hamburgerMenuButton.innerHTML = '→'
-      console.log(hamburgerMenuButton.innerHTML)
-      console.log('here')
     } else {
       hamburgerMenuButton.innerHTML = '←'
     }
   })
 }
-
-// export function navbarAnimation() {
-//   const navbar = document.getElementById('navbar')
-//   console.log('hi')
-// }
