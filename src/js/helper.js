@@ -50,7 +50,7 @@ export async function callAPI(endpoint = '', options = {}) {
   return fetch(baseUrl + endpoint, options)
     .then(convertToJson)
     .then((data) => {
-      console.log(data)
+      // console.log(data)
       return data
     })
 }
@@ -70,4 +70,8 @@ export function addHideNavListener() {
       hamburgerMenuButton.innerHTML = '←'
     }
   })
+}
+
+export function clearSessionStorage() {
+  sessionStorage.clear()
 }

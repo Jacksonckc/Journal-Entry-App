@@ -7,7 +7,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  padding: 15px 15px 15px 15px;
 }
+#entryForm label {
+  padding: 10px;
+}
+
 .entryButtons {
   width: 100%;
   height: auto;
@@ -15,34 +23,34 @@
   justify-content: space-around;
 }
 
-#leftButton {
-  width: 90px;
-  height: 90px;
-  /* padding: 0 30% 0 30%; */
-  background-color: #fafafa;
+#entry {
+  width: 100%;
+  max-width: 1000px;
+  min-width: 400px;
+  height: 300px;
+  box-sizing: border-box;
+  border: 2px solid #c3c3c3;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+  padding: 10px 10px 10px 10px;
+}
+
+#addEntry {
+  width: 40%;
+  max-width: 400px;
+  min-width: 100px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  background-color: var(--Green);
   border: none;
+  color: var(--White);
+  padding: 15px 32px;
   text-align: center;
-  text-decoration: none;
-  border-radius: 50px;
-  text-align: center;
+  font-size: 16px;
+  margin: 10px;
 }
 
-#leftButton:hover {
-  background-color: rgb(220, 220, 220);
-}
-
-#rightButton {
-  width: 90px;
-  height: 90px;
-  /* padding: 0 30% 0 30%; */
-  background-color: #fafafa;
-  border: none;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 50px;
-  text-align: center;
-}
-
-#rightButton:hover {
-  background-color: rgb(220, 220, 220);
+#addEntry:hover {
+  background-color: var(--Light_Green);
 }

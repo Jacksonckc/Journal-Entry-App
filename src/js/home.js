@@ -1,5 +1,12 @@
-import { loadLogo, loadNavbar, callAPI, addHideNavListener } from './helper.js'
+import {
+  loadLogo,
+  loadNavbar,
+  callAPI,
+  addHideNavListener,
+  clearSessionStorage,
+} from './helper.js'
 
+clearSessionStorage()
 loadLogo()
 loadNavbar('homePage').then(() => addHideNavListener())
 

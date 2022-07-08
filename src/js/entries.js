@@ -1,5 +1,12 @@
-import { loadLogo, loadNavbar, callAPI, addHideNavListener } from './helper'
+import {
+  loadLogo,
+  loadNavbar,
+  callAPI,
+  addHideNavListener,
+  clearSessionStorage,
+} from './helper'
 
+clearSessionStorage()
 loadLogo()
 loadNavbar('entriesPage').then(() => addHideNavListener())
 
@@ -83,7 +90,8 @@ async function populateEntriesContent() {
       entryEditBtn.setAttribute('class', 'editBtn')
       entryEditBtn.innerHTML = 'Edit'
       entryEditBtn.addEventListener('click', () => {
-        // window.location.replace('./entry.html')
+        sessionStorage.setItem('isEdit', item._id)
+        window.location.replace('./entry.html')
       })
 
       // --------------------------------------------------
@@ -112,13 +120,3 @@ async function deleteEntry(id) {
   await callAPI('entries/' + id, options)
   window.location.reload()
 }
-
-// edit entry
-// async function editEntry(id) {
-//   const options = {
-//     method: 'PUT',
-//   }
-
-//   await callAPI('entries/' + id, options)
-//   window.location.reload()
-// }
