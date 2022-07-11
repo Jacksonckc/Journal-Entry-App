@@ -4,8 +4,10 @@ import {
   callAPI,
   addHideNavListener,
   clearSessionStorage,
+  setTheme,
 } from './helper.js'
 
+setTheme()
 clearSessionStorage()
 loadLogo()
 loadNavbar('homePage').then(() => addHideNavListener())

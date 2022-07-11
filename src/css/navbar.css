@@ -9,7 +9,7 @@ body {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   justify-items: center;
-  background-color: var(--Brown);
+  background-color: var(--Navbar_Background_Color);
   border-radius: 10px 10px 0 0;
   padding: 10px 0;
 }
@@ -22,8 +22,8 @@ body {
 
 #navbar li:hover {
   transition: 1s;
-  background-color: azure;
-  box-shadow: 2px 2px 5px var(--Dark_Green);
+  background-color: var(--Light_Green);
+  box-shadow: 2px 2px 5px var(--Black);
 }
 
 #navbar li .navLinks img {
@@ -34,7 +34,7 @@ body {
 #navbar li .navLinks div {
   transition: padding 1s;
   display: none;
-  color: var(--Dark_Green);
+  color: var(--Black);
   font-family: 'Roboto', sans-serif;
 }
 
@@ -66,7 +66,7 @@ body {
     height: 100vh;
     width: var(--logo_width);
     padding-top: 100px;
-    box-shadow: 5px 0 10px var(--Dark_Green);
+    box-shadow: 5px 0 10px var(--Black);
   }
 
   .toggleNavbarStyle {
@@ -93,7 +93,7 @@ body {
     background-color: var(--Dark_Green);
   }
   #hamburgerMenuButton:hover {
-    box-shadow: 2px 2px 5px var(--Dark_Green);
+    box-shadow: 2px 2px 5px var(--Black);
   }
   .toggleButtonStyle {
     transform: translateX(20px);

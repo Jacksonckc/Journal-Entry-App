@@ -2,11 +2,13 @@
 
 :root {
   /* Colors */
+  --Navbar_Background_Color: #fff;
   --Brown: #9b6959;
   --Light_Green: #79bea0;
   --Green: #46ab86;
   --White: #f8f7f9;
-  --Dark_Green: #122b14;
+  --Dark_Green: #024e01;
+  --Black: #000;
 
   /* for font */
   --ratio: 1.5;
@@ -35,8 +37,12 @@
 
 body {
   height: 100vh;
+  z-index: -1;
 }
 
 main {
   padding: 10px;
+  /* background-color: var(--Background_Color); */
+  z-index: -1;
+  height: calc(100% - var(--logo_height));
 }

@@ -75,3 +75,25 @@ export function addHideNavListener() {
 export function clearSessionStorage() {
   sessionStorage.clear()
 }
+
+function getTheme() {
+  const cookie = document.cookie
+  const cookieArray = cookie.replace(' ', '').split(/[=;]/)
+  let theme = 'none'
+  console.log(cookieArray)
+  cookieArray.forEach((item, index) => {
+    if (item == 'theme') {
+      theme = cookieArray[index + 1]
+    }
+  })
+  return theme
+}
+
+export function setTheme() {
+  const theme = getTheme()
+  console.log(theme)
+  var r = document.querySelector(':root')
+  r.style.setProperty('--Navbar_Background_Color', `var(--${theme})`)
+  r.style.setProperty('--Navbar_Background_Color', `var(--${theme})`)
+  r.style.setProperty('--Navbar_Background_Color', `var(--${theme})`)
+}
