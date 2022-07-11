@@ -24,7 +24,6 @@
 }
 .entryItem {
   background-color: var(--Light_Green);
-  background: url('../img/forest.jpeg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -38,7 +37,7 @@
 }
 
 .addEntryItem {
-  cursor: default;
+  cursor: pointer;
 }
 
 .entryItem:hover {

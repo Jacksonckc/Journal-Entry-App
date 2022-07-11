@@ -28,7 +28,8 @@ async function populateEntriesContent() {
       entryItem.setAttribute('class', 'entryItem clickToOpen')
 
       entryItem.addEventListener('click', (e) => {
-        if (e.target == e.currentTarget) {
+        // only works when you clikc on the box and the text in the box.
+        if (e.target == e.currentTarget || e.target.classList == 'entryText') {
           // if there already has an overlay open, remove that overlay class
           document.querySelector('.displayOverlay') &&
             document
