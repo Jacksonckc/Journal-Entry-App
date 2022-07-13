@@ -60,7 +60,7 @@ export function addHideNavListener() {
   const main = document.querySelector('main')
   let hamburgerMenuButton = navbar.querySelector('button')
 
-  navbar.addEventListener('click', () => {
+  hamburgerMenuButton.addEventListener('click', () => {
     navbar.classList.toggle('toggleNavbarStyle')
     main.classList.toggle('toggleMainStyle')
     hamburgerMenuButton.classList.toggle('toggleButtonStyle')
@@ -93,7 +93,5 @@ export function setTheme() {
   const theme = getTheme()
   console.log(theme)
   var r = document.querySelector(':root')
-  r.style.setProperty('--Navbar_Background_Color', `var(--${theme})`)
-  r.style.setProperty('--Navbar_Background_Color', `var(--${theme})`)
   r.style.setProperty('--Navbar_Background_Color', `var(--${theme})`)
 }
