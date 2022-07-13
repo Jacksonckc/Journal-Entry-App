@@ -2,7 +2,7 @@
 @import url(logo.css);
 @import url(navbar.css);
 
-#entryForm {
+#goalForm {
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -12,7 +12,7 @@
   font-size: 24px;
   padding: 15px 15px 15px 15px;
 }
-#entryForm label {
+#goalForm label {
   padding: 10px;
 }
 
@@ -23,7 +23,7 @@
   justify-content: space-around;
 } */
 
-#entry {
+#goal {
   width: 100%;
   max-width: 1000px;
   min-width: 400px;
@@ -36,7 +36,7 @@
   padding: 10px 10px 10px 10px;
 }
 
-#addEntry {
+#addGoal {
   width: 40%;
   max-width: 400px;
   min-width: 100px;
@@ -51,6 +51,6 @@
   margin: 10px;
 }
 
-#addEntry:hover {
+#addGoal:hover {
   background-color: var(--Light_Green);
 }
