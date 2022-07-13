@@ -4,8 +4,8 @@ import {
   callAPI,
   addHideNavListener,
   setTheme,
-  clearSessionStorage
 } from './helper.js'
+
 setTheme()
 loadLogo()
 loadNavbar().then(() => addHideNavListener())
